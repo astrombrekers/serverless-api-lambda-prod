@@ -60,6 +60,7 @@ def get_products():
     try:
         response = table.scan()
         result = response['Items']
+        print(result)
 
         while 'LastEvaluatedKey' in response:
             response.table.scan(ExclusiveStartKey=response['LastEvaluatedKey'])
