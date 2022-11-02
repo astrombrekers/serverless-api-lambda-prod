@@ -69,6 +69,7 @@ def get_products():
         body = {
             'products': result
         }
+        print('test')
         return build_response(200, body)
     except:
         logger.exception('Error')
